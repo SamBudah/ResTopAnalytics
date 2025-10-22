@@ -1,66 +1,93 @@
+# learn_page.R: Learning resources for data analysis
+
 render_learn_page <- function() {
-  tagList(
-    img(src = "logo.png", id = "logo", class = "logo clickable", alt = "Logo not found"),
-    div(class = "learn-page",
-        div(class = "learn-content",
-            # Header Section
-            h1("Discover Data Analysis"),
-            p("New to data analysis? No worries! ResTop Analytics makes it fun and easy to uncover insights from your numbers, whether you're a beginner or just curious."),
-            
-            # What is Data Analysis
-            h2("What’s Data Analysis All About?"),
-            p("Think of data analysis as finding treasures in your numbers! It’s about spotting patterns, answering questions, and making smart choices. With ResTop Analytics, you can explore sales data, survey results, or anything else—no math degree needed!"),
-            
-            # Key Concepts
-            h2("Key Ideas, Made Simple"),
-            tags$div(
-              tags$p(tags$b("Summary Stats: "), "Quick numbers that describe your data, like the average (what’s typical) or how spread out it is. It’s like a snapshot of your data’s personality."),
-              tags$p(tags$b("Correlation: "), "Checks if two things move together, like hours studied and test scores. If one goes up and the other does too, that’s a positive correlation."),
-              tags$p(tags$b("Regression: "), "Predicts something from another, like guessing a house’s price based on its size."),
-              tags$p(tags$b("ANOVA: "), "Compares averages across groups. For example, do different schools have different test scores?"),
-              tags$p(tags$b("Chi-Square: "), "Tests if categories are linked, like whether kids and adults prefer different snacks."),
-              tags$p(tags$b("Clustering: "), "Groups similar things, like sorting customers by what they buy.")
-            ),
-            
-            # How to Use ResTop Analytics
-            h2("How to Get Started"),
-            p("ResTop Analytics is super easy to use. Here’s how it works:"),
-            tags$ul(
-              tags$li(tags$b("Upload Data: "), "Drop in a CSV or Excel file. It’s like a spreadsheet with columns (e.g., 'Age', 'Salary') and rows for each entry."),
-              tags$li(tags$b("Pick Columns: "), "Choose what to analyze, like 'Height' and 'Weight' to see if they’re related."),
-              tags$li(tags$b("Analyze: "), "Hit buttons to explore:", tags$br(),
-                      tags$ul(
-                        tags$li(tags$b("View Data: "), "See your data table."),
-                        tags$li(tags$b("Auto Analyze: "), "Get suggestions on what to try."),
-                        tags$li(tags$b("Summary: "), "Basic stats."),
-                        tags$li(tags$b("Correlation: "), "How numbers connect."),
-                        tags$li(tags$b("Regression: "), "Make predictions."),
-                        tags$li(tags$b("ANOVA: "), "Compare groups."),
-                        tags$li(tags$b("Chi-Square: "), "Check category links."),
-                        tags$li(tags$b("Clustering: "), "Find similar groups."),
-                        tags$li(tags$b("Charts: "), "Make scatter plots, histograms, or boxplots.")
-                      )
-              ),
-              tags$li(tags$b("Understand Results: "), "See clear outputs, like a plot or a number from -1 to 1 for correlation. We’ll suggest next steps too!"),
-              tags$li(tags$b("Save Results: "), "Download a report with your findings and charts.")
-            ),
-            
-            # Tips Section
-            h2("Tips to Shine"),
-            tags$ul(
-              tags$li("Keep your data tidy—no blank cells or odd values. We clean some errors, but tidy files work best."),
-              tags$li("Try different analyses to find surprises. Not sure where to start? Use 'Auto Analyze'."),
-              tags$li("Use charts! They make patterns pop out way better than numbers alone.")
-            ),
-            
-            # Why It Matters
-            h2("Why It’s Awesome"),
-            p("Data analysis turns boring numbers into exciting insights. Spot trends, predict outcomes, or just get curious—ResTop Analytics makes it all simple and fun. Ready to explore?"),
-            
-            # Navigation Button
-            actionButton("back_to_intro", "Back to Home", class = "action-button")
-        )
-    ),
-    div(class = "footer", "© 2025 ResTop Analytics")
+  div(class = "learn-page",
+      div(class = "learn-content",
+          h1("📚 Learn Data Analysis"),
+          
+          h2("Understanding Your Data"),
+          p("Data analysis is the process of inspecting, cleaning, transforming, and modeling data to discover useful information, draw conclusions, and support decision-making."),
+          
+          h3("Types of Variables"),
+          tags$ul(
+            tags$li(strong("Numeric Variables:"), "Continuous or discrete numbers (e.g., height, price, age)"),
+            tags$li(strong("Categorical Variables:"), "Groups or categories (e.g., gender, product type, region)"),
+            tags$li(strong("Ordinal Variables:"), "Categories with order (e.g., small, medium, large)")
+          ),
+          
+          h2("Common Statistical Tests"),
+          
+          h3("📈 Correlation Analysis"),
+          p("Measures the strength and direction of relationship between two numeric variables."),
+          tags$ul(
+            tags$li("Range: -1 to +1"),
+            tags$li("+1: Perfect positive correlation"),
+            tags$li("-1: Perfect negative correlation"),
+            tags$li("0: No correlation")
+          ),
+          
+          h3("📊 Regression Analysis"),
+          p("Models the relationship between a dependent variable and one or more independent variables."),
+          tags$ul(
+            tags$li("Used for prediction and understanding relationships"),
+            tags$li("R-squared: Proportion of variance explained"),
+            tags$li("P-value: Statistical significance of relationships")
+          ),
+          
+          h3("📋 ANOVA (Analysis of Variance)"),
+          p("Compares means across three or more groups to determine if there are statistically significant differences."),
+          tags$ul(
+            tags$li("Requires: One categorical (grouping) variable and one numeric variable"),
+            tags$li("Null hypothesis: All group means are equal"),
+            tags$li("P-value < 0.05: Significant differences exist")
+          ),
+          
+          h3("🧩 Chi-Square Test"),
+          p("Tests for association between two categorical variables."),
+          tags$ul(
+            tags$li("Requires: Two categorical variables"),
+            tags$li("Tests if variables are independent or related"),
+            tags$li("P-value < 0.05: Significant association exists")
+          ),
+          
+          h3("🔍 Clustering"),
+          p("Groups similar observations together without predefined categories."),
+          tags$ul(
+            tags$li("Unsupervised learning technique"),
+            tags$li("Useful for segmentation and pattern discovery"),
+            tags$li("K-means: Most common clustering algorithm")
+          ),
+          
+          h2("Best Practices"),
+          
+          h3("Data Preparation"),
+          tags$ul(
+            tags$li("Always check for missing values"),
+            tags$li("Remove outliers when appropriate"),
+            tags$li("Ensure correct data types"),
+            tags$li("Normalize data when comparing different scales")
+          ),
+          
+          h3("Interpretation"),
+          tags$ul(
+            tags$li("Statistical significance ≠ practical significance"),
+            tags$li("Correlation ≠ causation"),
+            tags$li("Consider sample size and effect size"),
+            tags$li("Always visualize your data")
+          ),
+          
+          h2("Next Steps"),
+          p("Ready to start analyzing? Upload your data and explore the various analysis options available in ResTop Analytics!"),
+          
+          div(class = "action-buttons",
+              actionButton("back_to_intro", "Back to Home", class = "action-button"),
+              actionButton("start_from_learn", "Start Analyzing", class = "action-button")
+          )
+      )
   )
 }
+
+# Navigation from learn page
+observeEvent(input$start_from_learn, {
+  page_state("app")
+})

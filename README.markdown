@@ -1,110 +1,208 @@
-# ResTop Analytics
+# ResTop Analytics 📊
 
-ResTop Analytics is an interactive R Shiny application designed to make data analysis accessible and engaging for users of all skill levels. Whether you're exploring data for the first time or conducting advanced statistical analysis, this platform provides intuitive tools for data upload, visualization, and interpretation.
+![Shiny](https://img.shields.io/badge/Shiny-R-blue)
+![Version](https://img.shields.io/badge/version-2.0.0-green)
+![License]
 
-## Features
+A modern, interactive R Shiny application for data analysis and visualization. ResTop Analytics makes data science accessible to everyone with its intuitive interface and powerful analytical capabilities.
 
-- **Data Upload**: Import CSV or Excel files for analysis.
-- **Data Exploration**: View data tables, summary statistics, and column types.
-- **Statistical Analysis**:
-  - Summary Statistics
-  - Correlation Analysis
-  - Linear Regression
-  - ANOVA
-  - Chi-Square Tests
-  - K-Means Clustering
-- **Visualizations**:
-  - Scatter Plots
-  - Histograms
-  - Boxplots
-- **Auto Analysis**: Get suggested analyses based on your data.
-- **Downloadable Reports**: Export results and charts as a zip file.
-- **Learn Page**: A beginner-friendly guide to data analysis concepts and how to use the app.
+![ResTop Analytics Demo](<https://sambudah.shinyapps.io/restopanalytics/>)
 
-## Installation
+## ✨ Features
 
-1. Clone the repository:
+### 🎯 Core Analysis
+- **Descriptive Statistics**: Summary statistics and data overview
+- **Correlation Analysis**: Relationship between numeric variables
+- **Regression Modeling**: Linear regression with visualization
+- **ANOVA Testing**: Group mean comparisons
+- **Chi-Square Tests**: Categorical data analysis
+- **Clustering**: K-means clustering with plots
 
+### 🎨 Visualization
+- **Scatter Plots**: With trend lines and confidence intervals
+- **Histograms**: Distribution analysis with density curves
+- **Box Plots**: Group distribution comparisons
+- **Interactive Plots**: Professional ggplot2 visualizations
+
+### 🚀 User Experience
+- **Modern UI**: Glass morphism design with smooth animations
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Sample Data**: Built-in datasets for quick testing
+- **Auto Analysis**: Smart suggestions based on data types
+- **Educational Content**: Built-in learning resources
+
+## 🛠 Installation
+
+### Prerequisites
+- R (version 4.0+ recommended)
+- RStudio (optional but recommended)
+
+### Quick Start
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/ResTopAnalytics.git
+   git clone https://github.com/SamBudah/ResTopAnalytics.git
+   cd ResTop-Analytics
    ```
 
-2. Ensure you have R and RStudio installed.
-
-3. Install the required R packages:
-
-   ```R
-   install.packages(c("shiny", "shinyjs", "shinyBS", "ggplot2", "dplyr", "tidyr", "caret", "readxl", "zip", "cluster", "MASS"))
+2. **Install dependencies**:
+   ```r
+   # Run the setup script
+   source("setup.R")
    ```
 
-4. Navigate to the project directory and run the app:
-
-   ```R
-   library(shiny)
-   runApp()
+3. **Launch the app**:
+   ```r
+   # Method 1: Using RStudio
+   # Open app.R and click "Run App"
+   
+   # Method 2: Using R console
+   shiny::runApp()
    ```
 
-## Usage
+## 📦 Dependencies
 
-1. **Launch the App**: Run `app.R` in RStudio or via the command line to start the Shiny server.
-2. **Navigate**:
-   - **Home Page**: Introduction to ResTop Analytics with options to start analyzing or learn more.
-   - **Learn Page**: Explore data analysis basics and app instructions.
-   - **Analysis Page**: Upload data, select variables, and perform analyses.
-3. **Analyze Data**:
-   - Upload a CSV or Excel file.
-   - Choose columns for analysis or visualization.
-   - Click buttons to run analyses or generate charts.
-   - Download a report with your findings.
-4. **Tips**:
-   - Ensure data is clean (no missing or invalid values) for best results.
-   - Use the "Auto Analyze" feature for quick insights.
-   - Explore charts to visualize trends.
+The app automatically installs these packages:
 
-## File Structure
+| Package | Purpose |
+|---------|---------|
+| `shiny` | Core web framework |
+| `ggplot2` | Data visualization |
+| `dplyr` | Data manipulation |
+| `readxl` | Excel file support |
+| `caret` | Machine learning utilities |
+| `cluster` | Clustering algorithms |
 
-- `app.R`: Main Shiny app script to launch the application.
-- `ui.R`: Defines the user interface, including page navigation.
-- `server.R`: Handles server-side logic, data processing, and analysis.
-- `learn_page.R`: Renders the educational "Learn More" page.
-- `styles.css`: Custom CSS for styling (place in `www/` directory).
-- `logo.png`: App logo (place in `www/` directory).
+## 🎮 Usage
 
-## Dependencies
+### 1. **Upload Data**
+- Support for CSV and Excel files
+- Drag-and-drop interface
+- Sample dataset available
 
-- R packages: `shiny`, `shinyjs`, `shinyBS`, `ggplot2`, `dplyr`, `tidyr`, `caret`, `readxl`, `zip`, `cluster`, `MASS`
-- Ensure `logo.png` and `styles.css` are in the `www/` directory relative to the app files.
+### 2. **Explore Variables**
+- Automatic data type detection
+- Variable selection interface
+- Data preview with search
 
-## Deployment
+### 3. **Run Analysis**
+- Click analysis buttons for instant results
+- Auto-analysis for smart suggestions
+- Interactive visualizations
 
-To deploy on shinyapps.io:
+### 4. **Export Results**
+- Download analysis reports
+- Save plots as high-quality images
+- Export data summaries
 
-1. Install the `rsconnect` package:
+## 📁 Project Structure
 
-   ```R
-   install.packages("rsconnect")
+```
+ResTop-Analytics/
+├── app.R                 # Main application launcher
+├── ui.R                  # User interface definition
+├── server.R              # Server-side logic
+├── learn_page.R          # Educational content
+├── setup.R               # Dependency management
+├── www/
+│   ├── styles.css        # Modern CSS styling
+│   └── app.js           # Enhanced interactions
+└── README.markdown      # Project documentation
+```
+
+## 🌐 Deployment
+
+### ShinyApps.io
+```r
+# Install rsconnect
+install.packages('rsconnect')
+
+# Configure account
+rsconnect::setAccountInfo(
+  name='your-account-name',
+  token='your-token',
+  secret='your-secret'
+)
+
+# Deploy app
+rsconnect::deployApp()
+```
+
+### RStudio Connect
+- Publish directly from RStudio
+- Enterprise-grade hosting
+
+### Shiny Server
+- Self-hosted deployment
+- Custom server configuration
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Setup
+```bash
+# Clone your fork
+git clone https://github.com/SamBudah/ResTopAnalytics.git
+
+# Add upstream remote
+git remote add upstream https://github.com/SamBudah/ResTopAnalytics.git
+
+# Create development branch
+git checkout -b development
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Package Installation Fails**
+   ```r
+   # Install from CRAN
+   install.packages("package_name", dependencies = TRUE)
+   
+   # Or from GitHub
+   remotes::install_github("username/repo")
    ```
 
-2. Configure your shinyapps.io account:
+2. **App Won't Start**
+   - Check all dependencies are installed
+   - Verify file paths are correct
+   - Check R version compatibility
 
-   ```R
-   rsconnect::setAccountInfo(name="yourname", token="YOUR_TOKEN", secret="YOUR_SECRET")
-   ```
+3. **File Upload Issues**
+   - Ensure file is CSV or Excel format
+   - Check file size limits
+   - Verify column names are valid
 
-3. Deploy the app:
+## 📄 License
 
-   ```R
-   rsconnect::deployApp()
-   ```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Notes
+## 🙏 Acknowledgments
 
-- Ensure `logo.png` exists in the `www/` directory to avoid rendering issues.
-- The app assumes clean data; invalid values are filtered out automatically, but tidy files yield better results.
-- For large datasets, performance may depend on your system's resources.
+- RStudio for the amazing Shiny framework
+- Tidyverse team for data science packages
+- Contributors and testers
 
-Copyright (c) 2025 ResTop Analytics
+## 📞 Support
 
-## Contact
+- **Issues**: [GitHub Issues](https://github.com/SamBudah/ResTopAnalytics/issues)
+- **Email**: www.samutua17@gmail.com
+- **Documentation**: [Wiki](https://github.com/SamBudah/ResTopAnalytics/wiki)
 
-For issues or suggestions, please open an issue on this repository or contact the maintainer at \www.samutua17@gmail.com\.
+---
+
+<div align="center">
+
+**Made with ❤️ and R**
+
+[⭐ Star this repo on GitHub](https://github.com/SamBudah/ResTopAnalytics)
+
+</div>
