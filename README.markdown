@@ -2,7 +2,7 @@
 
 ![Shiny](https://img.shields.io/badge/Shiny-R-blue)
 ![Version](https://img.shields.io/badge/version-2.0.0-green)
-![License]
+![License](https://img.shields.io/badge/license-MIT-yellow)
 
 A modern, interactive R Shiny application for data analysis and visualization. ResTop Analytics makes data science accessible to everyone with its intuitive interface and powerful analytical capabilities.
 
