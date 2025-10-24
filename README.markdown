@@ -4,7 +4,9 @@
 ![Version](https://img.shields.io/badge/version-2.0.0-green)
 A modern, interactive R Shiny application for data analysis and visualization. ResTop Analytics makes data science accessible to everyone with its intuitive interface and powerful analytical capabilities.
 
-![ResTop Analytics App](https://sambudah.shinyapps.io/restopanalytics/)
+## 🚀 Live Application
+
+**Access the live app here**: [https://sambudah.shinyapps.io/restopanalytics/](https://sambudah.shinyapps.io/restopanalytics/)
 
 ## ✨ Features
 
