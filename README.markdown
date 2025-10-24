@@ -49,7 +49,7 @@ A modern, interactive R Shiny application for data analysis and visualization. R
 source("setup.R")
 
 # Method 1: Using RStudio
-# Open app.R and click "Run App"
+Open app.R and click "Run App"
 
 # Method 2: Using R console
 shiny::runApp()
