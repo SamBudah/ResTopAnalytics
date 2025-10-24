@@ -6,7 +6,7 @@
 
 A modern, interactive R Shiny application for data analysis and visualization. ResTop Analytics makes data science accessible to everyone with its intuitive interface and powerful analytical capabilities.
 
-![ResTop Analytics Demo](<https://sambudah.shinyapps.io/restopanalytics/>)
+![ResTop Analytics App](<https://sambudah.shinyapps.io/restopanalytics/>)
 
 ## ✨ Features
 
